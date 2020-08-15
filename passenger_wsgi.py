@@ -1,4 +1,4 @@
-import myapp.wsgi
+import personal.wsgi
 SCRIPT_NAME = '/home/shankvza/personal'
 
 class PassengerPathInfoFix(object):
@@ -18,5 +18,5 @@ class PassengerPathInfoFix(object):
         environ['PATH_INFO'] = request_uri[offset:].split('?', 1)[0]
         return self.app(environ, start_response)
 
-application = myapp.wsgi.application
+application = personal.wsgi.application
 application = PassengerPathInfoFix(application)
