@@ -25,7 +25,10 @@ SECRET_KEY = '^r#*v%p6u8y+%gq3uvov+jq)w4zjyta1)m#2n5i1#u@b!sj7i4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'shaninpersonal.xyz'
+    'localhost'
+]
 
 
 # Application definition
