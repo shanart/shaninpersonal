@@ -41,7 +41,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # installed
+    'ckeditor',
+
+    # local
+    'apps.user',
+    'apps.blog'
 ]
+
+
+AUTH_USER_MODEL = 'user.User'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -124,3 +135,23 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_files')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "static_media")
+
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+CKEDITOR_IMAGE_BACKEND = 'pillow'
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar_Basic': [
+        ],
+        'toolbar_YourCustomToolbarConfig': [
+            {'name': 'styles', 'items': ['Styles', 'Format', 'Font', 'FontSize', 'Bold', 'Italic', 'Underline']},
+            {'name': 'paragraph',
+             'items': ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']},
+            {'name': 'links', 'items': ['Link', 'Unlink']},
+            {'name': 'insert',
+             'items': ['Image']
+            },
+        ],
+        'toolbar': 'YourCustomToolbarConfig',
+        'tabSpaces': 4
+    }
+}
