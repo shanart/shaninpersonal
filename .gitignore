@@ -1,5 +1,9 @@
 variables.sh
 static_files
+static_media
+uploads
+.cpanel.yml
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
